@@ -1,0 +1,13 @@
+# macOS & OS artifacts
+.DS_Store
+qemu-monitor-socket
+
+# Temporary build objects
+*.o
+*.ppm
+payload.bin
+dist/NvVars
+
+# Legacy development scratchpad
+deprecated/
+

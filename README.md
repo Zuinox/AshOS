@@ -1,6 +1,6 @@
-# SubhashishOS v2.0 — 64-Bit Bare-Metal Operating System
+# Ash v2.0 — 64-Bit Bare-Metal Operating System
 
-**Author:** Subhashish Reddy (Incoming MBA Candidate @ IIM Shillong | Systems & Product Enthusiast)  
+**Author:** Subhashish (Systems & Product Enthusiast)  
 **Architecture:** `x86_64` Bare-Metal UEFI | **Stack:** C, x86_64 Assembly, Custom UEFI Bootloader, LLVM/Clang, QEMU
 
 ![SubhashishOS v2.0 Desktop Environment](screenshot.png)
@@ -9,7 +9,7 @@
 
 ## Overview
 
-**SubhashishOS** is a custom 64-bit operating system engineered from first principles in C and x86_64 Assembly—with zero external libraries (`-ffreestanding -nodefaultlib`) and no underlying Linux/POSIX runtime.
+**AshOS** is a custom 64-bit operating system engineered from first principles in C and x86_64 Assembly—with zero external libraries (`-ffreestanding -nodefaultlib`) and no underlying Linux/POSIX runtime.
 
 It boots directly from UEFI firmware via a custom two-stage bootloader (`BOOTX64.EFI`), transitions out of UEFI Boot Services, establishes its own 64-bit Global Descriptor Table (GDT), Task State Segment (TSS), Interrupt Descriptor Table (IDT), 4-level page tables (2 MB Huge Pages), Physical Memory Manager (PMM), Kernel Heap (`kmalloc`/`kfree`), PCI bus enumerator, and a bare-metal **USB 3.0 (xHCI)** driver stack—all powering a 64-bit double-buffered graphical desktop environment.
 
@@ -99,7 +99,7 @@ chmod +x run.sh
 ./run.sh
 ```
 
-### Try These Commands in the SubhashishOS Shell
+### Try These Commands in the AshOS Shell
 ```text
 help
 ls
@@ -117,7 +117,7 @@ uptime
 ## Repository Structure
 
 ```text
-SubhashishOS/
+AshOS/
 ├── dist/                    # Generated binaries and UEFI boot image
 │   ├── kernel.bin           # Flat 64-bit OS kernel binary (linked at 16MB)
 │   └── EFI/BOOT/BOOTX64.EFI # UEFI bootloader application
